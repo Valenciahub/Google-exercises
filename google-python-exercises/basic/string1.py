@@ -70,11 +70,8 @@ def mix_up(a, b):
     firstb = b[:2]
     lasta = a[2:]
     lastb = b[2:]
-<<<<<<< HEAD
     return firstb + lasta + ' ' + firsta + lastb
-=======
     return firstb + lasta + ' ' + firsta + last
->>>>>>> solve_strings
 
 
 # Provided simple test() function used in main() to print
