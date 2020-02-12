@@ -35,11 +35,7 @@ def donuts(count):
 # and the last 2 chars of the original string,
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
-<<<<<<< HEAD
-def both_ends(s): 
-=======
 def both_ends(s):
->>>>>>> solve_strings
     if len(s) < 2:
         return ''
     else:
