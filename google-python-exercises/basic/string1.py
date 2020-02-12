@@ -65,7 +65,7 @@ def mix_up(a, b):
     return '0'
 
 
-# Provided simle test() function used in main() to print
+# Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(got, expected):
     if got == expected:
