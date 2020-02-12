@@ -35,7 +35,11 @@ def donuts(count):
 # and the last 2 chars of the original string,
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
+<<<<<<< HEAD
 def both_ends(s): 
+=======
+def both_ends(s):
+>>>>>>> solve_strings
     if len(s) < 2:
         return ''
     else:
@@ -70,7 +74,11 @@ def mix_up(a, b):
     firstb = b[:2]
     lasta = a[2:]
     lastb = b[2:]
+<<<<<<< HEAD
     return firstb + lasta + ' ' + firsta + lastb
+=======
+    return firstb + lasta + ' ' + firsta + last
+>>>>>>> solve_strings
 
 
 # Provided simple test() function used in main() to print
@@ -93,7 +101,7 @@ def main():
     test(donuts(10), 'Number of donuts: many')
     test(donuts(99), 'Number of donuts: many')
 
-    print
+    print()
     print('both_ends')
     test(both_ends('spring'), 'spng')
     test(both_ends('Hello'), 'Helo')
@@ -101,14 +109,14 @@ def main():
     test(both_ends('xyz'), 'xyyz')
 
   
-    print
+    print()
     print('fix_start')
     test(fix_start('babble'), 'ba**le')
     test(fix_start('aardvark'), 'a*rdv*rk')
     test(fix_start('google'), 'goo*le')
     test(fix_start('donut'), 'donut')
 
-    print
+    print()
     print('mix_up')
     test(mix_up('mix', 'pod'), 'pox mid')
     test(mix_up('dog', 'dinner'), 'dig donner')
