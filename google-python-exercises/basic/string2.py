@@ -36,14 +36,6 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-    x_front = []
-    other = []
-    for strng in words:
-        if strng.startswith('x'):
-            x_front.append(strng)
-        else:
-            other.append(strng)    
-    return sorted(x_front) + sorted(other)
 
 
 # C. fix_start
@@ -56,9 +48,7 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-    return
-    x = sorted(tuples, key = lambda x: x[-1])
-    return x 
+
 
 # D. MixUp
 # Given strings a and b, return a single string with a and b separated
