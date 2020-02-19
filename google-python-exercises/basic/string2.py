@@ -47,6 +47,13 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
+    pivot_a = math.ceil(len(a)/2)
+    pivot_b = math.ceil(len(b)/2)
+    a_front = a[:pivot_a]
+    b_front = b[:pivot_b]
+    a_back = a[pivot_a:]
+    b_back = b[pivot_b:]
+    return a_front + b_front + a_back + b_back
 
 
 # Simple provided test() function used in main() to print
