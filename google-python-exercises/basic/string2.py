@@ -36,7 +36,14 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-    return
+x_front = []
+    other = []
+    for strng in words:
+        if strng.startswith('x'):
+            x_front.append(strng)
+        else:
+            other.append(strng)    
+    return sorted(x_front) + sorted(other)
 
 
 # C. fix_start
