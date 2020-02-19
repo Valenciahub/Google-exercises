@@ -32,6 +32,11 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
+    if s.endswith('ing'):
+        return s + 'ly'
+    if len(s) < 3:
+        return s
+    return s + 'ing'
 
 
 # F. front_back
