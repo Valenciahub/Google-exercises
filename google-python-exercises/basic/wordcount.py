@@ -1,4 +1,4 @@
-#!/usr/bin/python -tt
+#!/usr/bin/env python3
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -39,7 +39,30 @@ print_words() and print_top().
 
 import sys
 
-# +++your code here+++
+def word_dict(filename): 
+    word_count = {} 
+    fh = open(filename) 
+    for word in fh.read().split(): 
+        word = word.lower() 
+        if not word in word_count: 
+            word_count[word] = 1 
+        else: 
+            word_count[word] = word_count[word] + 1 
+    return word_count 
+  
+def print_words(filename): 
+    word_counts = word_dict(filename) 
+    words = sorted(word_counts.keys())  
+    for word in words: 
+        full_words = word + ': ' + str(word_counts[word]) 
+        print(full_words) 
+  
+def print_top(filename): 
+    cnt_list = word_dict(filename) 
+    cnt_list = sorted(cnt_list.items(), key = lambda x: x[-1], reverse = True)[:20] 
+    for word, cnt in cnt_list: 
+        print(word + ': ' + str(cnt)) 
+
 # Define print_words(filename) and print_top(filename) functions.
 # You could write a helper utility function that reads a file
 # and builds and returns a word/count dict for it.
@@ -50,19 +73,19 @@ import sys
 # This basic command line argument parsing code is provided and
 # calls the print_words() and print_top() functions which you must define.
 def main():
-  if len(sys.argv) != 3:
-    print 'usage: ./wordcount.py {--count | --topcount} file'
-    sys.exit(1)
+    if len(sys.argv) != 3:
+        print('usage: ./wordcount.py {--count | --topcount} file')
+        sys.exit(1)
 
-  option = sys.argv[1]
-  filename = sys.argv[2]
-  if option == '--count':
-    print_words(filename)
-  elif option == '--topcount':
-    print_top(filename)
-  else:
-    print 'unknown option: ' + option
-    sys.exit(1)
+    option = sys.argv[1]
+    filename = sys.argv[2]
+    if option == '--count':
+        print_words(filename)
+    elif option == '--topcount':
+        print_top(filename)
+    else:
+        print ('unknown option: ' + option)
+        sys.exit(1)
 
 if __name__ == '__main__':
-  main()
+    main()
